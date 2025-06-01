@@ -9,6 +9,8 @@ export const questions = [
       "Park as far to the right as possible",
       "Put your hazard warning light on",
     ],
+    image: "",
+    isMultiple: true,
     answer: [
       "Open your trunk and hood",
       "Call for help using a mobile phone or an expressway phone",
@@ -24,6 +26,8 @@ export const questions = [
       "The front end will pull towards the side of the blowout",
       "The front end will pull to the opposite side of the blowout",
     ],
+    image: "",
+    isMultiple: false,
     answer: "The front end will pull towards the side of the blowout",
   },
   {
@@ -35,6 +39,8 @@ export const questions = [
       "Speed up so that you don't hold the ambulance",
       "Pull over to the right and slow down or even stop if necessary",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Pull over to the right and slow down or even stop if necessary",
   },
   {
@@ -46,6 +52,8 @@ export const questions = [
       "Pull to the side of the road and refasten the hood",
       "Turn your headlights on and look out of the side window",
     ],
+    image: "",
+    isMultiple: true,
     answer: [
       "Look through the gap underneath the hood or out of the side window",
       "Pull to the side of the road and refasten the hood",
@@ -59,6 +67,8 @@ export const questions = [
       "report the accident to the nearest hospital",
       "report the accident to the nearest police station",
     ],
+    image: "",
+    isMultiple: false,
     answer: "report the accident to the nearest police station",
   },
   {
@@ -68,6 +78,8 @@ export const questions = [
       "Hold firmly on to the wheel while slowing down the vehicle",
       "Turn the wheels to the opposite the direction of the skid",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Hold firmly on to the wheel while slowing down the vehicle",
   },
   {
@@ -78,6 +90,8 @@ export const questions = [
       "keep the victim lying down",
       "try to determine who is at fault",
     ],
+    image: "",
+    isMultiple: false,
     answer: "call a physician",
   },
   {
@@ -88,6 +102,8 @@ export const questions = [
       "The front end will pull towards the side of the blowout",
       "The front end will pull to the opposite side of the blowout",
     ],
+    image: "",
+    isMultiple: false,
     answer: "The back end will sway towards the side of the blowout",
   },
   {
@@ -98,6 +114,8 @@ export const questions = [
       "install the early warning device",
       "switch on the parking light and install the Early Warning Device to the front and rear of the motor vehicle",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "switch on the parking light and install the Early Warning Device to the front and rear of the motor vehicle",
   },
@@ -109,6 +127,8 @@ export const questions = [
       "offer all reasonable assistance",
       "move past the accident scene to avoid traffic build up",
     ],
+    image: "",
+    isMultiple: false,
     answer: "offer all reasonable assistance",
   },
   {
@@ -119,6 +139,8 @@ export const questions = [
       "consist of a good foot break that works as intended",
       "consist of brake fluid at all times",
     ],
+    image: "",
+    isMultiple: false,
     answer: "consist of a good foot and hand brake",
   },
   {
@@ -128,6 +150,8 @@ export const questions = [
       "Driving while listening to music",
       "Driving fast on a highway",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Driving recklessly and under the influence of alcohol",
   },
   {
@@ -138,6 +162,8 @@ export const questions = [
       "your driving style",
       "the vehicle type",
     ],
+    image: "",
+    isMultiple: false,
     answer: "authorized speed limit",
   },
   {
@@ -147,6 +173,8 @@ export const questions = [
       "more vehicles are on the road at night",
       "the distance we can see ahead is reduced",
     ],
+    image: "",
+    isMultiple: false,
     answer: "the distance we can see ahead is reduced",
   },
   {
@@ -157,27 +185,35 @@ export const questions = [
       "Moving your eyes regularly by looking near and far",
       "Gauging another car's speed",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Moving your eyes regularly by looking near and far",
   },
   {
     question: "Seatbelts must be worn by children aged:",
     choices: ["5 years and above", "7 years and above", "6 years and above"],
+    image: "",
+    isMultiple: false,
     answer: "6 years and above",
   },
   {
     question:
       "Which of the following is the maximum speed limit on expressway for cars?",
     choices: ["60 kph", "80 kph", "100 kph"],
+    image: "",
+    isMultiple: false,
     answer: "100 kph",
   },
   {
     question:
       "Graft and corruption in the traffic enforcement system can be eliminated by:",
     choices: [
-      "understanding the road and traffic rules and regulations",
+      "developing technical driving skills alone",
       "understanding the road and traffic rules and regulations",
       "self discipline by drivers and obeying traffic rules and regulations",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "self discipline by drivers and obeying traffic rules and regulations",
   },
@@ -189,6 +225,8 @@ export const questions = [
       "allowed if you have a professional driver's license",
       "allowed as long as you can handle it",
     ],
+    image: "",
+    isMultiple: false,
     answer: "never allowed",
   },
   {
@@ -199,6 +237,8 @@ export const questions = [
       "Philippine Motors Association",
       "Land Transportation Office (LTO)",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Land Transportation Office (LTO)",
   },
   {
@@ -209,12 +249,16 @@ export const questions = [
       "Every citizen must strive for their right to breathe clean air.",
       "Every citizen has the right to breathe clean air.",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Every citizen has the right to breathe clean air.",
   },
   {
     question:
       "To avoid suspension or revocation, how many days must a driver with an apprehended license settle his case with LTO?",
     choices: ["within 15 days", "within 10 days", "within 30 days"],
+    image: "",
+    isMultiple: false,
     answer: "within 15 days",
   },
   {
@@ -224,11 +268,15 @@ export const questions = [
       "have it taken away permanently by the LTO",
       "have it taken temporarily by the LTO",
     ],
+    image: "",
+    isMultiple: false,
     answer: "have it taken temporarily by the LTO",
   },
   {
     question: "To obtain one’s driver’s license, one must be at least:",
     choices: ["16 years old", "17 years old", "18 years old"],
+    image: "",
+    isMultiple: false,
     answer: "18 years old",
   },
   {
@@ -238,6 +286,8 @@ export const questions = [
       "after operating the motor vehicle",
       "before operating the motor vehicle",
     ],
+    image: "",
+    isMultiple: false,
     answer: "before operating the motor vehicle",
   },
   {
@@ -247,6 +297,8 @@ export const questions = [
       "driver is driving at 60kph",
       "driver keep changing lanes without signaling",
     ],
+    image: "",
+    isMultiple: false,
     answer: "driver keep changing lanes without signaling",
   },
   {
@@ -257,6 +309,8 @@ export const questions = [
       "Turn your fog light on",
       "Increase your speed until it becomes visible",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Slow down and get back to a safer following distance",
   },
   {
@@ -266,6 +320,8 @@ export const questions = [
       "the speed since you have enough lighting anyways",
       "a slow speed to avoid road crash",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "the distance that you can see where you come to a complete stop within the distance that your headlights can light up.",
   },
@@ -276,17 +332,23 @@ export const questions = [
       "drink coffee so you won't fall asleep",
       "always turn your headlights on",
     ],
+    image: "",
+    isMultiple: false,
     answer: "decrease your speed",
   },
   {
     question: "How close should another car be before you dim your headlights?",
     choices: ["150 meter", "100 meter", "200 meters"],
+    image: "",
+    isMultiple: false,
     answer: "150 meter",
   },
   {
     question:
       "If you are backing up in a straight line, turn and look behind and over your shoulder at:",
     choices: ["right", "left and right", "left"],
+    image: "",
+    isMultiple: false,
     answer: "right",
   },
   {
@@ -297,6 +359,8 @@ export const questions = [
       "get out of the vehicle and scout the area behind you first",
       "turn your head to see that the way is clear",
     ],
+    image: "",
+    isMultiple: false,
     answer: "get out of the vehicle and scout the area behind you first",
   },
   {
@@ -307,6 +371,8 @@ export const questions = [
       "just continue ahead",
       "continue to make the turn",
     ],
+    image: "https://ltoportal.ph/wp-content/uploads/2023/09/handling8.jpg",
+    isMultiple: false,
     answer: "continue ahead and find a u-turn",
   },
   {
@@ -317,6 +383,8 @@ export const questions = [
       "Maintain your speed as most have water insulation anyways",
       "Proceed at a very slow speed",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Proceed at a very slow speed",
   },
   {
@@ -327,11 +395,15 @@ export const questions = [
       "apply your foot and hand brakes gently with steady pressure",
       "apply your brakes gently with steady pressure",
     ],
+    image: "",
+    isMultiple: false,
     answer: "apply your brakes gently with steady pressure",
   },
   {
     question: "On a wet road, you must:",
     choices: ["maintain speed", "slow down", "increase speed"],
+    image: "",
+    isMultiple: false,
     answer: "slow down",
   },
   {
@@ -342,6 +414,8 @@ export const questions = [
       "flick your dimmer, switch two or three times to signify your intention to the driver of the vehicle that you intend to overtake",
       "put hazard lights on so he knows you're about to overtake",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "flick your dimmer, switch two or three times to signify your intention to the driver of the vehicle that you intend to overtake",
   },
@@ -353,6 +427,8 @@ export const questions = [
       "immediately upon entering the deceleration lane",
       "immediately upon spotting the deceleration lane",
     ],
+    image: "",
+    isMultiple: false,
     answer: "immediately upon entering the deceleration lane",
   },
   {
@@ -363,6 +439,8 @@ export const questions = [
       "apply your hand brakes gently with steady pressure",
       "apply your brakes abruptly with hard pressure",
     ],
+    image: "",
+    isMultiple: false,
     answer: "apply your brakes gently with steady pressure",
   },
   {
@@ -372,6 +450,8 @@ export const questions = [
       "blow your horn whenever you sense an oncoming vehicle",
       "blow your horn when approaching a blind curve",
     ],
+    image: "",
+    isMultiple: false,
     answer: "blow your horn when approaching a blind curve",
   },
   {
@@ -382,6 +462,8 @@ export const questions = [
       "Parking lights or lower-beam headlights",
       "Signal lights",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Parking lights or lower-beam headlights",
   },
   {
@@ -391,6 +473,8 @@ export const questions = [
       "middle of the road",
       "intersection",
     ],
+    image: "",
+    isMultiple: false,
     answer: "right side of the road nearest the sidewalk",
   },
   {
@@ -401,12 +485,16 @@ export const questions = [
       "other side of the street",
       "middle of the street",
     ],
+    image: "https://ltoportal.ph/wp-content/uploads/2023/09/parking3.jpg",
+    isMultiple: false,
     answer: "edge of the street",
   },
   {
     question:
       "A driver ________ park or stop at the side of the road within 6 meters of a crosswalk because it reduces the visibility of pedestrians to other drivers.",
     choices: ["should not", "is capable", "is allowed"],
+    image: "",
+    isMultiple: false,
     answer: "should not",
   },
   {
@@ -416,12 +504,16 @@ export const questions = [
       "turn off the engine and engage the handbrake",
       "close the windows",
     ],
+    image: "",
+    isMultiple: false,
     answer: "turn off the engine and engage the handbrake",
   },
   {
     question:
       "Never park or stop at the side of the road with a fire hydrant, you may only park with a distance of at least:",
     choices: ["3 meters", "4 meters", "5 meters"],
+    image: "",
+    isMultiple: false,
     answer: "5 meters",
   },
   {
@@ -431,6 +523,8 @@ export const questions = [
       "The vehicle is not moving while loading passengers in",
       "The vehicle is not moving while unloading passengers",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "the vehicle is stationary and remains inactive in a place for an appreciable period of time",
   },
@@ -441,6 +535,8 @@ export const questions = [
       "away from the curb",
       "any direction will do",
     ],
+    image: "",
+    isMultiple: false,
     answer: "toward the curb of the sidewalk",
   },
   {
@@ -450,12 +546,16 @@ export const questions = [
       "be sure to stay awake and ready to move",
       "warn others by turning on your headlights",
     ],
+    image: "",
+    isMultiple: false,
     answer: "warn others by turning on your 4 way emergency flashers",
   },
   {
     question:
       "A driver must not park or stop at the side of the road with a “STOP SIGN” or a traffic control signal because it reduces visibility for other drivers, especially when it is within:",
     choices: ["4 meters", "5 meters", "6 meters"],
+    image: "",
+    isMultiple: false,
     answer: "6 meters",
   },
   {
@@ -465,6 +565,8 @@ export const questions = [
       "for parking and when visibility is poor",
       "when driving on a well-lighted streets",
     ],
+    image: "",
+    isMultiple: false,
     answer: "for parking and when visibility is poor",
   },
   {
@@ -474,6 +576,8 @@ export const questions = [
       "on a one-way street",
       "within 5-meters of a fire-hydrant",
     ],
+    image: "",
+    isMultiple: false,
     answer: "on a crosswalk",
   },
   {
@@ -483,6 +587,8 @@ export const questions = [
       "parks at the entrance and exit of an industrial establishment",
       "parks at the entrance and exit of a residential establishment",
     ],
+    image: "",
+    isMultiple: false,
     answer: "parks at the entrance and exit of hospital and fire stations",
   },
   {
@@ -492,6 +598,8 @@ export const questions = [
       "parking without hazard lights on",
       "parking within 5 meters from a signalized intersection",
     ],
+    image: "",
+    isMultiple: false,
     answer: "parking within 5 meters from a signalized intersection",
   },
   {
@@ -501,11 +609,15 @@ export const questions = [
       "When the street or road is wide enough",
       "When you have no other option",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Never",
   },
   {
     question: "On a two-lane road, overtaking is only allowed only at the:",
     choices: ["left lane", "both right and left lanes", "right lane"],
+    image: "",
+    isMultiple: false,
     answer: "left lane",
   },
   {
@@ -516,6 +628,8 @@ export const questions = [
       "Left arm held straight in horizontal position",
       "Left arm held down and hand pointing at ground",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Left arm held down and hand pointing at ground",
   },
   {
@@ -526,6 +640,8 @@ export const questions = [
       "blow your horn so he's alerted",
       "maintain your speed",
     ],
+    image: "https://ltoportal.ph/wp-content/uploads/2023/09/road-position3.jpg",
+    isMultiple: false,
     answer: "alert and be ready to slow down or stop if necessary",
   },
   {
@@ -536,6 +652,8 @@ export const questions = [
       "The vehicle going uphill",
       "The vehicle that honks its horn first",
     ],
+    image: "",
+    isMultiple: false,
     answer: "The vehicle going downhill",
   },
   {
@@ -546,12 +664,16 @@ export const questions = [
       "blinded by the headlights of an approaching vehicle",
       "all of the above",
     ],
+    image: "",
+    isMultiple: false,
     answer: "all of the above",
   },
   {
     question:
       "Keeping one's distance lessens the risk of accident. One good rule is to leave a car length or:",
     choices: ["3-second rule", "4-second rule", "2-second rule"],
+    image: "",
+    isMultiple: false,
     answer: "2-second rule",
   },
   {
@@ -561,6 +683,8 @@ export const questions = [
       "high speed road",
       "two lane road",
     ],
+    image: "",
+    isMultiple: false,
     answer: "intersection and when approaching a bridge or a curve",
   },
   {
@@ -570,12 +694,16 @@ export const questions = [
       "left arm held straight in horizontal position",
       "left arm held down and hand pointing at ground",
     ],
+    image: "",
+    isMultiple: false,
     answer: "left arm bent at elbow, hand pointing up",
   },
   {
     question:
       "The safest thing to do even if you have the rights of using the road is:",
     choices: ["don't force your rights", "horn", "force your rights"],
+    image: "",
+    isMultiple: false,
     answer: "don't force your rights",
   },
   {
@@ -586,6 +714,8 @@ export const questions = [
       "Look at the glaring light",
       "Put your headlight on high also",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Quickly look on the right side of the road",
   },
   {
@@ -596,6 +726,8 @@ export const questions = [
       "enter the intersection immediately",
       "slow down then enter the intersection when it is clear",
     ],
+    image: "",
+    isMultiple: false,
     answer: "slow down then enter the intersection when it is clear",
   },
   {
@@ -606,6 +738,8 @@ export const questions = [
       "Brake or clutch while turning so you won't overspeed",
       "Look behind on both sides and see if it is safe to change lane and make the turn",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "Look behind on both sides and see if it is safe to change lane and make the turn",
   },
@@ -617,6 +751,8 @@ export const questions = [
       "allowed if the car ahead is turning left",
       "against the law",
     ],
+    image: "",
+    isMultiple: false,
     answer: "against the law",
   },
   {
@@ -626,6 +762,8 @@ export const questions = [
       "The vehicles already in the roundabout",
       "The vehicles approaching the roundabout",
     ],
+    image: "",
+    isMultiple: false,
     answer: "The vehicles already in the roundabout",
   },
   {
@@ -635,6 +773,8 @@ export const questions = [
       "do so slowly with caution",
       "yield to approaching cars",
     ],
+    image: "",
+    isMultiple: false,
     answer: "yield to approaching cars",
   },
   {
@@ -644,11 +784,16 @@ export const questions = [
       "when passing to the right on a one-way street",
       "when to do so would interfere with traffic",
     ],
+    image: "",
+    isMultiple: false,
     answer: "when to do so would interfere with traffic",
   },
   {
     question: "Which of the following best describes the picture?",
     choices: ["Wide road ahead", "Narrow road ahead", "Slippery road"],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings2.jpg",
+    isMultiple: false,
     answer: "Narrow road ahead",
   },
   {
@@ -658,18 +803,24 @@ export const questions = [
       "Slow down and proceed with caution",
       "Wait for the green light",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Slow down and proceed with caution",
   },
   {
     question:
       "Signs that are round, rectangular with white and blue background are called:",
     choices: ["warning signs", "informative signs", "regulatory signs"],
+    image: "",
+    isMultiple: false,
     answer: "informative signs",
   },
   {
     question:
       "What is the meaning of a traffic sign that has circle, octagon or reverse triangle with red color?",
     choices: ["Warning", "Giving direction", "Compulsory"],
+    image: "",
+    isMultiple: false,
     answer: "Compulsory",
   },
   {
@@ -679,16 +830,25 @@ export const questions = [
       "you cannot overtake",
       "it separates traffic moving in opposite directions",
     ],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-6.jpg",
+    isMultiple: false,
     answer: "it separates traffic moving in opposite directions",
   },
   {
     question: "Which of the following best describes the picture?",
     choices: ["Slippery road", "Road construction", "Broken road"],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-7.jpg",
+    isMultiple: false,
     answer: "Road construction",
   },
   {
     question: "Which of the following best describes the picture?",
     choices: ["Intersection warning", "Train cannot pass", "Train track"],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-8.jpg",
+    isMultiple: false,
     answer: "Train track",
   },
   {
@@ -698,6 +858,8 @@ export const questions = [
       "at a green traffic light",
       "at a red traffic light",
     ],
+    image: "",
+    isMultiple: false,
     answer: "at a red traffic light",
   },
   {
@@ -707,22 +869,31 @@ export const questions = [
       "You must limit your speed to 30 kph",
       "The distance to the next town is 30 kph",
     ],
-    answer: "You must limit your speed to 30 kph",
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-8.jpg",
+    isMultiple: false,
   },
   {
     question:
       "What is the meaning of a traffic sign that has a triangle with red color?",
     choices: ["Warning sign", "Reminder sign", "Information sign"],
+    image: "",
+    isMultiple: false,
     answer: "Warning sign",
   },
   {
     question: "Which of the following best describes the picture?",
     choices: ["No entry", "Give way", "Stop"],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-12.jpg",
+    isMultiple: false,
     answer: "Give way",
   },
   {
     question: "The signal warns of a hazard ahead:",
     choices: ["circle", "diamond", "triangle"],
+    image: "",
+    isMultiple: false,
     answer: "diamond",
   },
   {
@@ -732,23 +903,33 @@ export const questions = [
       "Dangerous curve on the right side",
       "Intersection warning",
     ],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-14.jpg",
+    isMultiple: false,
     answer: "Dangerous curve on the right side",
   },
   {
     question: "Which of the following best describes the picture?",
     choices: ["Slippery road", "Steep road", "Broken road"],
+    image:
+      "https://ltoportal.ph/wp-content/uploads/2023/09/signs-and-markings-15.jpg",
+    isMultiple: false,
     answer: "Steep road",
   },
   {
     question:
       "It refers to an act penalizing a person under the influence of alcohol, dangerous drugs, and similar substances, and for other purposes.",
     choices: ["R.A. no. 10586", "R.A. no. 10585", "R.A. no. 10584"],
+    image: "",
+    isMultiple: false,
     answer: "R.A. no. 10586",
   },
   {
     question:
       "It shall mean that the LEO has reasonable ground to believe that the person driving the motor vehicle is under the influence of alcohol, dangerous drugs and/or other similar substances upon personally witnessing a traffic offense committed.",
     choices: ["improbable cause", "probable cause", "likely cause"],
+    image: "",
+    isMultiple: false,
     answer: "probable cause",
   },
   {
@@ -759,6 +940,8 @@ export const questions = [
       "revocation of the license and registration certificate",
       "imprisonment of the driver and operator for six months",
     ],
+    image: "",
+    isMultiple: false,
     answer: "revocation of the license and registration certificate",
   },
   {
@@ -769,18 +952,24 @@ export const questions = [
       "painted with color not approved by LTO",
       "inefficient",
     ],
+    image: "",
+    isMultiple: false,
     answer: "unsafe, unsightly, defective and dilapidated",
   },
   {
     question:
       "When a driver of PUV refuses to render service, convey passengers, such violation is penalized with:",
     choices: ["fine of ₱1,000", "fine of ₱2,000", "fine of ₱3,000"],
+    image: "",
+    isMultiple: false,
     answer: "fine of ₱3,000",
   },
   {
     question:
       "You were apprehended because you were engaged in car racing while driving in a super highway, what traffic violation did you commit?",
     choices: ["Reckless driving", "Gambling", "Overspeeding"],
+    image: "",
+    isMultiple: false,
     answer: "Reckless driving",
   },
   {
@@ -791,6 +980,8 @@ export const questions = [
       "The Walk of Shame Test",
       "The Walk-and-turn",
     ],
+    image: "",
+    isMultiple: false,
     answer: "The Walk-and-turn",
   },
   {
@@ -800,6 +991,8 @@ export const questions = [
       "Php 2,000.00 fine",
       "Php 3,000.00 fine with 12-month suspension of driver's license",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Not more than 6 months of imprisonment",
   },
   {
@@ -810,6 +1003,8 @@ export const questions = [
       "twelve (12) months imprisonment, and a fine ranging from twenty thousand pesos (₱20,000.00) to eighty thousand pesos (₱80,000.00)",
       "three (3) months imprisonment, and a fine ranging from twenty thousand pesos (₱20,000.00) to eighty thousand pesos (₱80,000.00)",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "six (6) months imprisonment, and a fine ranging from twenty thousand pesos (₱20,000.00) to eighty thousand pesos (₱80,000.00)",
   },
@@ -821,6 +1016,8 @@ export const questions = [
       "non-professional driver’s license shall be confiscated and suspended for a period of twelve (12) months upon final conviction by a regular court",
       "non-professional driver’s license shall be confiscated and suspended for a period of twelve (24) months upon final conviction by a regular court",
     ],
+    image: "",
+    isMultiple: false,
     answer:
       "non-professional driver’s license shall be confiscated and suspended for a period of twelve (12) months upon final conviction by a regular court",
   },
@@ -831,6 +1028,8 @@ export const questions = [
       "blood alcohol count (BAC)",
       "blood alcohol intake (BAI)",
     ],
+    image: "",
+    isMultiple: false,
     answer: "blood alcohol concentration (BAC)",
   },
   {
@@ -841,12 +1040,16 @@ export const questions = [
       "confiscated and will pay fine",
       "suspended and will pay fine",
     ],
+    image: "",
+    isMultiple: false,
     answer: "suspended and will pay fine",
   },
   {
     question:
       "For drivers of trucks, buses, motorcycles and public utility vehicles, a BAC level of more than _____ shall be conclusive proof that said driver is driving under the influence of alcohol.",
     choices: ["0.20%", "0.00%", "0.30%"],
+    image: "",
+    isMultiple: false,
     answer: "0.00%",
   },
   {
@@ -857,6 +1060,8 @@ export const questions = [
       "a fine of P300",
       "confiscation of motor vehicle plates",
     ],
+    image: "",
+    isMultiple: false,
     answer: "a fine of P2,000 and confiscation of vehicle plates",
   },
   {
@@ -867,6 +1072,8 @@ export const questions = [
       "Reinstall the stock muffler of your motorcycle",
       "Pay the violation fee",
     ],
+    image: "",
+    isMultiple: false,
     answer: "Reinstall the stock muffler of your motorcycle",
   },
 ];

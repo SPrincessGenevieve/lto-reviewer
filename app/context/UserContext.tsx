@@ -10,12 +10,15 @@ import {
 type Question = {
   question: string;
   choices: string[];
-  answer: string | string[];
+  image: string;
+  isMultiple: boolean;
+  answer?: string | string[];
 };
-
 type UserContextType = {
   isNonProfViolated: boolean;
   isProfViolated: boolean;
+  profLevel: string;
+  nonProfLevel: string;
   userAnswers: string[][]; // an array of string arrays (multiple answers per question)
   examQuestions: Question[];
   setUserDetails: (details: Partial<UserContextType>) => void;
@@ -25,6 +28,8 @@ type UserContextType = {
 const defaultUserContext: UserContextType = {
   isNonProfViolated: false,
   isProfViolated: false,
+  profLevel: "",
+  nonProfLevel: "",
   userAnswers: [],
   examQuestions: [],
   setUserDetails: () => {},

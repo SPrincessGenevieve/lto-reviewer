@@ -21,7 +21,7 @@ import Passed from "@/images/passed.png";
 
 const ITEMS_PER_PAGE = 9;
 
-export default function ResultsNonProfPage() {
+export default function ResultsProfPage() {
   const { userAnswers, examQuestions } = useUserContext();
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
@@ -90,7 +90,7 @@ export default function ResultsNonProfPage() {
   const passed = score >= passingScore;
 
   const handleRetake = () => {
-    router.push("/type/non-professional");
+    router.push("/type/professional");
   };
 
   return (

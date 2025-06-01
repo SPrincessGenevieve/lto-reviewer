@@ -14,12 +14,13 @@ function shuffleArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-export default function ExamNonProfPage() {
+export default function ExamProfPage() {
   const router = useRouter();
-  const { setUserDetails, nonProfLevel } = useUserContext();
+  const { setUserDetails, profLevel } = useUserContext();
 
-  const QUESTIONS_PER_PAGE = nonProfLevel === "easy" ? 20 : 25;
-  const TOTAL_QUESTIONS = nonProfLevel === "easy" ? 60 : 100;
+  const QUESTIONS_PER_PAGE = profLevel === "easy" ? 10 : 25;
+  const TOTAL_QUESTIONS = profLevel === "easy" ? 40 : 100;
+  console.log(profLevel);
 
   const [timeLeft, setTimeLeft] = useState(0);
   const [formattedTime, setFormattedTime] = useState("00:00:00");
@@ -34,24 +35,22 @@ export default function ExamNonProfPage() {
     setAnswers(Array(TOTAL_QUESTIONS).fill([]));
   }, []);
 
-  console.log(nonProfLevel);
-
   useEffect(() => {
     // Clear saved timer on mount to reset on each page load
-    localStorage.removeItem("exam_end_time_non_prof");
+    localStorage.removeItem("exam_end_time_prof");
 
-    const levelNormalized = nonProfLevel?.trim().toLowerCase() || "";
-    const durationMinutes = levelNormalized === "easy" ? 60 : 90;
+    const levelNormalized = profLevel?.trim().toLowerCase() || "";
+    const durationMinutes = levelNormalized === "easy" ? 45 : 90;
 
     const endTime = Date.now() + durationMinutes * 60 * 1000;
-    localStorage.setItem("exam_end_time_non_prof", endTime.toString());
+    localStorage.setItem("exam_end_time_prof", endTime.toString());
 
     const interval = setInterval(() => {
       const secondsLeft = Math.floor((endTime - Date.now()) / 1000);
 
       if (secondsLeft <= 0) {
         clearInterval(interval);
-        localStorage.removeItem("exam_end_time_non_prof");
+        localStorage.removeItem("exam_end_time_prof");
         setUserDetails({ userAnswers: answers, examQuestions: questions });
         router.push("/type/non-professional/results");
       } else {
@@ -62,21 +61,21 @@ export default function ExamNonProfPage() {
 
     return () => {
       clearInterval(interval);
-      localStorage.removeItem("exam_end_time_non_prof");
+      localStorage.removeItem("exam_end_time_prof");
     };
-  }, [nonProfLevel, answers, questions, router, setUserDetails]);
+  }, [profLevel, answers, questions, router, setUserDetails]);
 
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
         // Mark violation
-        sessionStorage.setItem("non_prof_violation", "true");
+        sessionStorage.setItem("prof_violation", "true");
 
         setUserDetails({
-          isNonProfViolated: true,
+          isProfViolated: true,
         });
 
-        router.replace("/type/non-professional");
+        router.replace("/type/professional");
       }
     };
 
@@ -142,14 +141,16 @@ export default function ExamNonProfPage() {
   };
 
   const handleNext = () => {
-    if (currentPage === Math.floor(TOTAL_QUESTIONS / QUESTIONS_PER_PAGE) - 1) {
-      localStorage.removeItem("exam_end_time_non_prof");
+    const lastPageIndex = Math.floor(TOTAL_QUESTIONS / QUESTIONS_PER_PAGE) - 1;
+
+    if (currentPage === lastPageIndex) {
+      // Final page: submit and go to results
+      localStorage.removeItem("exam_end_time_prof");
       setUserDetails({ userAnswers: answers, examQuestions: questions });
-      router.push("/type/non-professional/results");
+      router.push("/type/professional/results");
     } else {
-      // Last page: save and go to results
-      setUserDetails({ userAnswers: answers, examQuestions: questions });
-      router.push("/type/non-professional/results");
+      // Go to next page
+      setCurrentPage(currentPage + 1);
     }
   };
 
@@ -183,12 +184,7 @@ export default function ExamNonProfPage() {
         <div className="h-auto w-full">
           {currentQuestions.map((q, i) => (
             <div key={startIndex + i} className="mb-6">
-              <p
-                className="mb-2 font-semibold select-none"
-                onCopy={(e) => e.preventDefault()}
-                onCut={(e) => e.preventDefault()}
-                onPaste={(e) => e.preventDefault()}
-              >
+              <p className="mb-2 font-semibold">
                 {startIndex + i + 1}. {q.question}
               </p>
               {q.image !== "" && (

@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["ltoportal.ph", "cdni.iconscout.com"],
+  },
 };
 
 export default nextConfig;
