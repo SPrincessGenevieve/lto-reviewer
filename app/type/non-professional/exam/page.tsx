@@ -142,14 +142,17 @@ export default function ExamNonProfPage() {
   };
 
   const handleNext = () => {
-    if (currentPage === Math.floor(TOTAL_QUESTIONS / QUESTIONS_PER_PAGE) - 1) {
+
+    const lastPageIndex = Math.floor(TOTAL_QUESTIONS / QUESTIONS_PER_PAGE) - 1;
+
+    if (currentPage === lastPageIndex) {
+      // Final page: submit and go to results
       localStorage.removeItem("exam_end_time_non_prof");
       setUserDetails({ userAnswers: answers, examQuestions: questions });
       router.push("/type/non-professional/results");
     } else {
-      // Last page: save and go to results
-      setUserDetails({ userAnswers: answers, examQuestions: questions });
-      router.push("/type/non-professional/results");
+      // Go to next page
+      setCurrentPage(currentPage + 1);
     }
   };
 
