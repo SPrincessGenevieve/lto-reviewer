@@ -19,8 +19,7 @@ export default function ExamProfPage() {
   const { setUserDetails, profLevel } = useUserContext();
 
   const QUESTIONS_PER_PAGE = profLevel === "easy" ? 10 : 25;
-  const TOTAL_QUESTIONS = profLevel === "easy" ? 40 : 100;
-  console.log(profLevel);
+  const TOTAL_QUESTIONS = profLevel === "easy" ? 60 : 100;
 
   const [timeLeft, setTimeLeft] = useState(0);
   const [formattedTime, setFormattedTime] = useState("00:00:00");
@@ -40,7 +39,7 @@ export default function ExamProfPage() {
     localStorage.removeItem("exam_end_time_prof");
 
     const levelNormalized = profLevel?.trim().toLowerCase() || "";
-    const durationMinutes = levelNormalized === "easy" ? 45 : 90;
+    const durationMinutes = levelNormalized === "easy" ? 60 : 90;
 
     const endTime = Date.now() + durationMinutes * 60 * 1000;
     localStorage.setItem("exam_end_time_prof", endTime.toString());

@@ -64,7 +64,7 @@ export default function NonProfessional() {
               <div>
                 <br></br>
                 Please read each question carefully and choose the most
-                appropriate answer. You will be given {nonProfLevel === "easy" ? "1 hour" : "1 hour and 30 minutes"} to
+                appropriate answer. You will be given {nonProfLevel === "easy" ? "45 minutes" : "1 hour and 30 minutes"} to
                 complete the exam. Ensure you manage your time wisely.
               </div>
               <div className="flex flex-col gap-2">
@@ -83,7 +83,7 @@ export default function NonProfessional() {
                       carefully before submitting.
                     </li>
                     <li>
-                      The exam consists of {nonProfLevel === "hard" ? "100" : "60"} items, and a minimum passing
+                      The exam consists of {nonProfLevel === "easy" ? "40" : "100"} items, and a minimum passing
                       score is 75%.
                     </li>
                   </ul>

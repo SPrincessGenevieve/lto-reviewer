@@ -68,7 +68,7 @@ export default function Professional() {
                 <br></br>
                 Please read each question carefully and choose the most
                 appropriate answer. You will be given{" "}
-                {profLevel === "easy" ? "45" : "1 hour and 30"} minutes to
+                {profLevel === "easy" ? "1 hour" : "1 hour and 30"} minutes to
                 complete the exam. Ensure you manage your time wisely.
               </div>
               <div className="flex flex-col gap-2">
@@ -87,7 +87,7 @@ export default function Professional() {
                       carefully before submitting.
                     </li>
                     <li>
-                      The exam consists of {profLevel === "easy" ? "40" : "100"}{" "}
+                      The exam consists of {profLevel === "easy" ? "60" : "100"}{" "}
                       items, and a minimum passing score is 75%.
                     </li>
                   </ul>

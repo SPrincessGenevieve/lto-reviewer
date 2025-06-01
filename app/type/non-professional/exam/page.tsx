@@ -19,7 +19,7 @@ export default function ExamNonProfPage() {
   const { setUserDetails, nonProfLevel } = useUserContext();
 
   const QUESTIONS_PER_PAGE = nonProfLevel === "easy" ? 20 : 25;
-  const TOTAL_QUESTIONS = nonProfLevel === "easy" ? 60 : 100;
+  const TOTAL_QUESTIONS = nonProfLevel === "easy" ? 40 : 100;
 
   const [timeLeft, setTimeLeft] = useState(0);
   const [formattedTime, setFormattedTime] = useState("00:00:00");
@@ -41,7 +41,7 @@ export default function ExamNonProfPage() {
     localStorage.removeItem("exam_end_time_non_prof");
 
     const levelNormalized = nonProfLevel?.trim().toLowerCase() || "";
-    const durationMinutes = levelNormalized === "easy" ? 60 : 90;
+    const durationMinutes = levelNormalized === "easy" ? 45 : 90;
 
     const endTime = Date.now() + durationMinutes * 60 * 1000;
     localStorage.setItem("exam_end_time_non_prof", endTime.toString());
