@@ -16,11 +16,11 @@ export default function Home() {
   return (
     <div className="relative w-full h-full gap-2 flex flex-col justify-between items-center">
       <div className="w-full h-full flex gap-8 flex-col justify-center items-center z-10">
-        <div className="w-full flex flex-col justify-center items-center">
-          <Label className="text-4xl font-sans text-white">
+        <div className="w-full flex flex-col justify-center items-center p-2">
+          <Label className="text-4xl font-sans text-white text-center">
             Land Transportation Office Reviewer
           </Label>
-          <Label className="text-3xl font-sans text-white">
+          <Label className="text-3xl font-sans text-white text-center">
             Professional | Non-professional
           </Label>
           <Label className="mt-4 font-light text-white w-full max-w-[600px] text-center">
