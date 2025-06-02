@@ -131,3 +131,9 @@
     margin-top: 20%;
   } */
 }
+
+@media (max-width: 1295px) {
+  .progress-cont {
+    margin-top: 250px;
+  }
+}

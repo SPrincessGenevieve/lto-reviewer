@@ -1,5 +1,4 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,40 +6,38 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { AlertTriangle } from "lucide-react";
 import { useUserContext } from "@/app/context/UserContext";
 import { Label } from "@/components/ui/label";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
-export default function Professional() {
+export default function NonProfessional() {
   const router = useRouter();
-  const { isProfViolated, profLevel, setUserDetails } = useUserContext();
+  const { isNonProfViolated, nonProfLevel, setUserDetails } = useUserContext();
   const [level, setLevel] = useState("easy");
-
   const handleStartExam = () => {
-    console.log("CLICKED TO EXAM");
-    router.push("/type/professional/exam");
+    router.push("/type/review/exam");
   };
 
   const handleViolation = () => {
     setUserDetails({
-      isProfViolated: false,
+      isNonProfViolated: false,
     });
   };
 
   useEffect(() => {
     setUserDetails({
-      profLevel: level,
+      nonProfLevel: level,
     });
   }, [level]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-full max-w-3xl p-4 flex flex-col justify-center items-center gap-4">
-        <Dialog open={isProfViolated === true && true}>
+    <div className="w-full h-full flex flex-col justify-center items-center z-40">
+      <div className="w-full max-w-3xl h-full p-4 flex flex-col justify-center items-center gap-4">
+        <Dialog open={isNonProfViolated === true && true}>
           <DialogContent className="w-full">
             <DialogTitle></DialogTitle>
             <div className="w-full flex flex-col justify-center items-center">
@@ -61,15 +58,23 @@ export default function Professional() {
         <Card className="rounded-none">
           <CardContent className="">
             <CardTitle>
-              Written Examination Introduction – LTO Professional
+              Written Examination Introduction – LTO Professional | Non-Professional
             </CardTitle>
             <CardDescription className="text-justify flex flex-col gap-4">
               <div>
                 <br></br>
                 Please read each question carefully and choose the most
-                appropriate answer. You will be given{" "}
-                {profLevel === "easy" ? "1 hour" : "1 hour and 30"} minutes to
-                complete the exam. Ensure you manage your time wisely.
+                appropriate answer.
+                <br></br>
+                {nonProfLevel === "hard" && (
+                  <p>
+                    <br></br>
+                    Note: Please take the exam in a well-lit environment so the
+                    facial detection camera can clearly recognize your face. If
+                    the camera cannot detect your face, the exam will
+                    automatically pause until your face is detected again.
+                  </p>
+                )}
               </div>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2 items-center font-semibold text-orange-600">
@@ -87,7 +92,12 @@ export default function Professional() {
                       carefully before submitting.
                     </li>
                     <li>
-                      The exam consists of {profLevel === "easy" ? "60" : "100"}{" "}
+                      The exam consists of{" "}
+                      {nonProfLevel === "easy"
+                        ? "40 "
+                        : nonProfLevel === "normal"
+                        ? "60 "
+                        : "100 "}
                       items, and a minimum passing score is 75%.
                     </li>
                   </ul>
@@ -113,6 +123,14 @@ export default function Professional() {
             Easy
           </ToggleGroupItem>
           <ToggleGroupItem
+            value="normal"
+            aria-label="Normal"
+            className="px-4 rounded-md text-sm font-medium
+          data-[state=on]:bg-red-500 data-[state=on]:text-white"
+          >
+            Normal
+          </ToggleGroupItem>
+          <ToggleGroupItem
             value="hard"
             aria-label="Hard"
             className="px-4 rounded-md text-sm font-medium
@@ -121,7 +139,7 @@ export default function Professional() {
             Hard
           </ToggleGroupItem>
         </ToggleGroup>
-        <Button onClick={handleStartExam} className="w-full">
+        <Button onClick={handleStartExam} className="w-full max-w-[400px]">
           Take Exam
         </Button>
       </div>

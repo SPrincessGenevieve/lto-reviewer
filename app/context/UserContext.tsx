@@ -21,6 +21,8 @@ type UserContextType = {
   nonProfLevel: string;
   userAnswers: string[][]; // an array of string arrays (multiple answers per question)
   examQuestions: Question[];
+  nonProfFaceDetection: boolean | null;
+  profFaceDetection: boolean | null;
   setUserDetails: (details: Partial<UserContextType>) => void;
   resetUserDetails: () => void;
 };
@@ -28,6 +30,8 @@ type UserContextType = {
 const defaultUserContext: UserContextType = {
   isNonProfViolated: false,
   isProfViolated: false,
+  nonProfFaceDetection: null,
+  profFaceDetection: null,
   profLevel: "",
   nonProfLevel: "",
   userAnswers: [],

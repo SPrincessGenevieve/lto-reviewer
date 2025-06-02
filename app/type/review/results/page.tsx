@@ -21,7 +21,7 @@ import Passed from "@/images/passed.png";
 
 const ITEMS_PER_PAGE = 9;
 
-export default function ResultsProfPage() {
+export default function ResultsNonProfPage() {
   const { userAnswers, examQuestions } = useUserContext();
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
@@ -90,12 +90,12 @@ export default function ResultsProfPage() {
   const passed = score >= passingScore;
 
   const handleRetake = () => {
-    router.push("/type/professional");
+    router.push("/type/review");
   };
 
   return (
-    <div className="w-full h-full flex flex-col min-h-screen p-6 bg-gray-50">
-      <div className="w-full flex items-center justify-center h-full">
+    <div className="w-full h-full flex flex-col  p-4 ">
+      <div className="w-full flex items-center justify-center  h-auto">
         {passed ? (
           <Image
             src={Passed}
@@ -114,7 +114,7 @@ export default function ResultsProfPage() {
           ></Image>
         )}
       </div>
-      <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-full h-auto flex flex-col items-center justify-center">
         <p
           className={`text-xl font-semibold text-center ${
             passed ? "text-green-600" : "text-red-600"
@@ -130,14 +130,14 @@ export default function ResultsProfPage() {
         </Button>
       </div>
 
-      <div className="w-full h-full  rounded-lg space-y-6">
+      <div className="w-full rounded-lg h-full  flex flex-col">
         <h1 className="text-2xl font-bold text-center">Exam Results</h1>
 
         <p className="text-lg text-center">
           Your Score: <strong>{score}</strong> / {examQuestions.length}
         </p>
 
-        <div className="card grid grid-cols-3 w-full justify-center  gap-4">
+        <div className="card grid grid-cols-3 w-full justify-center  gap-2">
           {currentQuestions.map((q, i) => {
             const actualIndex = startIndex + i;
             const userAnswer = userAnswers[actualIndex];
@@ -179,7 +179,7 @@ export default function ResultsProfPage() {
         </div>
 
         {/* ShadCN Pagination */}
-        <Pagination className="">
+        <Pagination className=" mt-4">
           <PaginationContent>
             {/* Previous Button */}
             <PaginationItem>
